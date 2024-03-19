@@ -6,17 +6,20 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
   title: 'Alpha Fit',
-  description: '',
 }
 
-export default function RootLayout({
+export const RootLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode
-}>) {
+}>) => {
   return (
     <html className={inter.variable} lang="pt">
-      <body>{children}</body>
+      <body className="bg-neutral-900 text-zinc-50 antialiased">
+        {children}
+      </body>
     </html>
   )
 }
+
+export default RootLayout
